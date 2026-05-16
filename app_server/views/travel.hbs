@@ -1,0 +1,27 @@
+{{> header}}
+
+<h1>{{title}}</h1>
+
+<table border="1">
+
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Length</th>
+        <th>Start</th>
+        <th>Resort</th>
+        <th>Per Person</th>
+    </tr>
+
+    {{#each trips}}
+    <tr>
+        <td>{{code}}</td>
+        <td>{{name}}</td>
+        <td>{{length}}</td>
+        <td>{{start}}</td>
+        <td>{{resort}}</td>
+        <td>{{perPerson}}</td>
+    </tr>
+    {{/each}}
+
+</table>
