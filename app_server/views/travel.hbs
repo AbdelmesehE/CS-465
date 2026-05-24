@@ -1,27 +1,51 @@
 {{> header}}
 
-<h1>{{title}}</h1>
+<div id="background">
+    <div id="page">
+        <div id="contents">
 
-<table border="1">
+            <div class="box">
+                <div>
+                    <div class="body">
 
-    <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Length</th>
-        <th>Start</th>
-        <th>Resort</th>
-        <th>Per Person</th>
-    </tr>
+                        <h1>Travel</h1>
 
-    {{#each trips}}
-    <tr>
-        <td>{{code}}</td>
-        <td>{{name}}</td>
-        <td>{{length}}</td>
-        <td>{{start}}</td>
-        <td>{{resort}}</td>
-        <td>{{perPerson}}</td>
-    </tr>
-    {{/each}}
+                        <ul id="sites">
 
-</table>
+                            {{#each trips}}
+
+                            <li>
+                                <a href="/travel">
+                                    <img src="{{this.image}}" alt="Img">
+                                </a>
+
+                                <h2>
+                                    <a href="/travel">{{this.name}}</a>
+                                </h2>
+
+                                <p>
+                                    {{this.description}}
+                                </p>
+
+                                <p>
+                                    <strong>Code:</strong> {{this.code}} <br>
+                                    <strong>Length:</strong> {{this.length}} <br>
+                                    <strong>Start Date:</strong> {{this.start}} <br>
+                                    <strong>Resort:</strong> {{this.resort}} <br>
+                                    <strong>Price:</strong> {{this.perPerson}}
+                                </p>
+                            </li>
+
+                            {{/each}}
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{{> footer}}
