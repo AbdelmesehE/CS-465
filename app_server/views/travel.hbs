@@ -15,12 +15,14 @@
                             {{#each trips}}
 
                             <li>
-                                <a href="/travel">
+                                <a href="/api/trips/{{this.code}}">
                                     <img src="{{this.image}}" alt="Img">
                                 </a>
 
                                 <h2>
-                                    <a href="/travel">{{this.name}}</a>
+                                    <a href="/api/trips/{{this.code}}">
+                                        {{this.name}}
+                                    </a>
                                 </h2>
 
                                 <p>
