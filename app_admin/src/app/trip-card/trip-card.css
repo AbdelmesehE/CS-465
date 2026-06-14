@@ -1,0 +1,28 @@
+.card {
+  width: 24rem !important;
+  margin-bottom: 20px;
+}
+
+.card-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.card-subtitle {
+  font-size: 1.1rem;
+}
+
+.card-text {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+}
+
+.card-body .btn {
+  margin-right: 10px;
+  margin-top: 10px;
+}

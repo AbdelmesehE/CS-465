@@ -1,0 +1,47 @@
+<h2>Add New Trip</h2>
+
+<form>
+  <div>
+    <label>Code</label>
+    <input type="text" [(ngModel)]="newTrip.code" name="code">
+  </div>
+
+  <div>
+    <label>Name</label>
+    <input type="text" [(ngModel)]="newTrip.name" name="name">
+  </div>
+
+  <div>
+    <label>Length</label>
+    <input type="text" [(ngModel)]="newTrip.length" name="length">
+  </div>
+
+  <div>
+    <label>Start Date</label>
+    <input type="text" [(ngModel)]="newTrip.start" name="start">
+  </div>
+
+  <div>
+    <label>Resort</label>
+    <input type="text" [(ngModel)]="newTrip.resort" name="resort">
+  </div>
+
+  <div>
+    <label>Per Person</label>
+    <input type="text" [(ngModel)]="newTrip.perPerson" name="perPerson">
+  </div>
+
+  <div>
+    <label>Image</label>
+    <input type="text" [(ngModel)]="newTrip.image" name="image">
+  </div>
+
+  <div>
+    <label>Description</label>
+    <textarea [(ngModel)]="newTrip.description" name="description"></textarea>
+  </div>
+
+  <button type="button" (click)="saveTrip()">
+  Save Trip
+</button>
+</form>

@@ -1,17 +1,20 @@
 const express = require('express');
 const path = require('path');
 const hbs = require('hbs');
+const cors = require('cors');
 
 require('./app_server/models/db');
 
 const app = express();
 
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 // View Engine Setup
 
 app.set('views', path.join(__dirname, 'app_server', 'views'));
 app.set('view engine', 'hbs');
-
 
 // Register HBS Partials
 
@@ -19,11 +22,9 @@ hbs.registerPartials(
     path.join(__dirname, 'app_server', 'views', 'partials')
 );
 
-
 // Static Files
 
 app.use(express.static(path.join(__dirname, 'public')));
-
 
 // Routes
 
@@ -33,7 +34,6 @@ const apiRouter = require('./app_api/routes/index');
 app.use('/', indexRouter);
 app.use('/api', apiRouter);
 
-
 // 404 Error Handler
 
 app.use((req, res, next) => {
@@ -41,7 +41,6 @@ app.use((req, res, next) => {
         title: '404 Error'
     });
 });
-
 
 // 500 Error Handler
 
@@ -52,7 +51,6 @@ app.use((err, req, res, next) => {
         title: '500 Error'
     });
 });
-
 
 // Start Server
 
